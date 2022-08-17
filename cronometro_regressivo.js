@@ -20,7 +20,7 @@ function minSec(minuto, segundo) {
         //aqui criei uma variável com para informar o tempo selecionado - qual botão foi clicado e
         //quanto tempo iniciou o timer.
         const tempoSel = document.querySelector('#tempoSel');
-        tempoSel.innerHTML = `Tempo selecionado: ${min} min.`
+        tempoSel.innerHTML = `Tempo selecionado: ${min}:${seg}.`
         //mais uma conferidinha...
         console.log(tempoSel)
 
