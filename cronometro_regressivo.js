@@ -33,6 +33,7 @@ function minSec(minuto, segundo) {
             if ((min > 0) || (seg > 0)) {
                 //seguindo ela verifica se segundos é igual a zero, então atribui o valor de
                 //59 para seguindos e diminui um minuto da variável minuto.
+
                 if (seg == 0) {
                     seg = 59;
                     min = min - 1
@@ -57,7 +58,13 @@ function minSec(minuto, segundo) {
                 //e inserir nele o valor de minuto (agora com o 0 à esquerda) seguido de : e do valor
                 //dos segundos(também com zero se for o caso).
                 document.getElementById('spanRelogio').innerHTML = min + ":" + seg;
-
+                console.log(min == 0 && seg < 10);
+                if(min == 0 && seg < 11){
+                    document.body.style = "background: rgb(255,255,255);\n" +
+                        "background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(246,140,0,1) 100%); !important";
+                } else {
+                    document.body.style = "background-image: url('img/Fundo.png') !important;"
+                }
                 //esta parte é muito importante!
                 //Aqui eu defino que toda a função relógio() vai ser executada a cada 1000 milissegundos,
                 //ou seja, vai executar a cada seguindo, o que dá a impressão de um contador regressivo
@@ -69,7 +76,11 @@ function minSec(minuto, segundo) {
                 //como falei antes se as  condicionais anteriores não forem atendidas este else
             //entra em ação para inserir no html um placeholder 00:00
             else {
+                document.querySelector('audio').play();
                 document.getElementById('spanRelogio').innerHTML = "00:00";
+                document.body.style = "background-image: url('img/Fundo.png') !important;"
+                zerado = true
+                clearTimeout(myTimeout);
             }
             //fim da função relogio()
         }

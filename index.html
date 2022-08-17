@@ -13,7 +13,9 @@
 </head>
 
 <body style="background-image: url('img/Fundo.png')">
-<div class="container" style="display: flex;">
+<!--<body>-->
+<div class="container" id="tudo" style="display: flex;">
+    <audio src="style/bip.mp3"></audio>
     <center id="monit">
         <center>
             </br>
@@ -26,6 +28,7 @@
             <h4 class="tempoSel" id="tempoSel">Selecione o tempo</h4>
         </h1>
 
+        <button class="btn btn-success btn-lg" onclick="minSec(0,12)" id="start">0,1 minuto</button>
         <button class="btn btn-success btn-lg" onclick="minSec(0,31)" id="start">0,5 minuto</button>
         <button class="btn btn-success btn-lg" onclick="minSec(1,1)" id="start">1 minuto</button>
         <button class="btn btn-success btn-lg" onclick="minSec(1,31)" id="start">1,5 minutos</button>
