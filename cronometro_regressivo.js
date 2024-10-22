@@ -62,7 +62,7 @@ function minSec(minuto, segundo) {
                 if(min == 0 && seg < 11){
                     document.getElementById('spanRelogio').style.color="rgb(255,255,0)";
                 } else {
-                    document.getElementById('spanRelogio').style.color="black";
+                    document.getElementById('spanRelogio').style.color="white";
                     document.body.style = "background-color: green !important;"
                 }
 
@@ -79,7 +79,7 @@ function minSec(minuto, segundo) {
             else {
                 document.querySelector('audio').play();
                 document.getElementById('spanRelogio').innerHTML = "00:00";
-                document.getElementById('spanRelogio').style.color="black";
+                document.getElementById('spanRelogio').style.color="white";
                 document.body.style = "background-color: green !important;"
                 zerado = true
                 clearTimeout(myTimeout);
