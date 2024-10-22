@@ -60,11 +60,12 @@ function minSec(minuto, segundo) {
                 document.getElementById('spanRelogio').innerHTML = min + ":" + seg;
                 console.log(min == 0 && seg < 10);
                 if(min == 0 && seg < 11){
-                    document.body.style = "background: rgb(255,255,255);\n" +
-                        "background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(246,140,0,1) 100%); !important";
+                    document.getElementById('spanRelogio').style.color="rgb(255,255,0)";
                 } else {
-                    document.body.style = "background-image: url('img/Fundo.png') !important;"
+                    document.getElementById('spanRelogio').style.color="black";
+                    document.body.style = "background-color: green !important;"
                 }
+
                 //esta parte é muito importante!
                 //Aqui eu defino que toda a função relógio() vai ser executada a cada 1000 milissegundos,
                 //ou seja, vai executar a cada seguindo, o que dá a impressão de um contador regressivo
@@ -78,7 +79,8 @@ function minSec(minuto, segundo) {
             else {
                 document.querySelector('audio').play();
                 document.getElementById('spanRelogio').innerHTML = "00:00";
-                document.body.style = "background-image: url('img/Fundo.png') !important;"
+                document.getElementById('spanRelogio').style.color="black";
+                document.body.style = "background-color: green !important;"
                 zerado = true
                 clearTimeout(myTimeout);
             }
